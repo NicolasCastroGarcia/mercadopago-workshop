@@ -5,13 +5,13 @@ class PaymentService {
     const url = "https://api.mercadopago.com/checkout/preferences";
 
     const body = {
-      payer_email: "comprador@email.com",
+      payer_email: "test_user_46945293@testuser.com",
       items: [
         {
           title: "Dummy Title",
           description: "Dummy description",
           picture_url: "http://www.myapp.com/myimage.jpg",
-          category_id: "cat123",
+          category_id: "category123",
           quantity: 1,
           unit_price: 10
         }
@@ -45,7 +45,7 @@ class PaymentService {
         currency_id: "ARS"
       },
       back_url: "https://google.com.ar",
-      payer_email: "comprador@gmail.com.ar"
+      payer_email: "test_user_46945293@testuser.com"
     };
 
     const subscription = await axios.post(url, body, {
